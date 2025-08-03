@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>VolunteerConnect Login</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-white"
+      style='--checkbox-tick-svg: url(&apos;data:image/svg+xml,%3csvg viewBox=%270 0 16 16%27 fill=%27rgb(18,20,22)%27 xmlns=%27http://www.w3.org/2000/svg%27%3e%3cpath d=%27M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z%27/%3e%3c/svg%3e&apos;); font-family: "Work Sans", "Noto Sans", sans-serif;'
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between border-b border-solid border-b-[#f1f2f4] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#121416]">
+            <h2 class="text-lg font-bold">VolunteerConnect</h2>
+          </div>
+        </header>
+
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="w-[512px] max-w-[960px] py-5">
+
+            <h2 class="text-[28px] font-bold text-center pb-3 pt-5">Welcome back</h2>
+
+            <!-- ✅ FORM START -->
+            <form action="/login" method="POST">
+              <!-- Username -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Username</p>
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                    class="form-input rounded-xl border border-[#dde1e3] h-14 p-[15px]"
+                  />
+                </label>
+              </div>
+
+              <!-- Password -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Password</p>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                    class="form-input rounded-xl border border-[#dde1e3] h-14 p-[15px]"
+                  />
+                </label>
+              </div>
+
+              <!-- Remember Me -->
+              <div class="flex items-center gap-4 px-4 min-h-14 justify-between">
+                <label class="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    name="remember_me"
+                    class="h-5 w-5 rounded border-[#dde1e3] border-2"
+                  />
+                  <span class="text-base font-normal">Remember me</span>
+                </label>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="px-4 py-3">
+                <button
+                  type="submit"
+                  class="w-full rounded-xl h-10 bg-[#dce8f3] font-bold"
+                >
+                  Log in
+                </button>
+              </div>
+            </form>
+            <!-- ✅ FORM END -->
+
+            <p class="text-[#6a7681] text-sm text-center underline">
+              Don't have an account? Sign up
+            </p>
+            <p class="text-[#6a7681] text-sm text-center underline">
+              Forgot password?
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

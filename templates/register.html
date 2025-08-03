@@ -1,0 +1,141 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Work+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+    <title>VolunteerConnect</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-white overflow-x-hidden"
+      style="font-family: 'Work Sans', 'Noto Sans', sans-serif;"
+    >
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between border-b border-[#f0f2f5] px-10 py-3">
+          <div class="flex items-center gap-4 text-[#111418]">
+            <h2 class="text-lg font-bold">VolunteerConnect</h2>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div class="flex items-center gap-9">
+              <a class="text-sm font-medium" href="#">Home</a>
+              <a class="text-sm font-medium" href="#">About</a>
+              <a class="text-sm font-medium" href="#">Opportunities</a>
+              <a class="text-sm font-medium" href="#">Contact</a>
+            </div>
+            <button class="rounded-lg bg-[#f0f2f5] px-4 h-10 font-bold">Login</button>
+          </div>
+        </header>
+
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="w-[512px] max-w-[960px] py-5">
+            <div class="p-4">
+              <p class="text-[32px] font-bold">Intern/Volunteer Registration</p>
+            </div>
+
+            <!-- ✅ FORM START -->
+            <form action="{{ url_for('registration') }}" method="POST" enctype="multipart/form-data">
+              <!-- Full Name -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Full Name</p>
+                  <input type="text" name="name" required placeholder="Enter your full name"
+                    class="form-input rounded-lg bg-[#f0f2f5] h-14 p-4" />
+                </label>
+              </div>
+
+              <!-- Email -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Email Address</p>
+                  <input type="email" name="email" required placeholder="Enter your email"
+                    class="form-input rounded-lg bg-[#f0f2f5] h-14 p-4" />
+                </label>
+              </div>
+
+              <!-- Phone -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Phone Number</p>
+                  <input type="text" name="phone" required placeholder="Enter your phone"
+                    class="form-input rounded-lg bg-[#f0f2f5] h-14 p-4" />
+                </label>
+              </div>
+
+              <!-- Institution -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Institution</p>
+                  <input type="text" name="institution" placeholder="Enter your institution"
+                    class="form-input rounded-lg bg-[#f0f2f5] h-14 p-4" />
+                </label>
+              </div>
+
+              <!-- Major -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Major</p>
+                  <input type="text" name="major" placeholder="Enter your major"
+                    class="form-input rounded-lg bg-[#f0f2f5] h-14 p-4" />
+                </label>
+              </div>
+
+              <!-- Year of Study -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Year of Study</p>
+                  <select name="year" class="form-input rounded-lg bg-[#f0f2f5] h-14 p-4">
+                    <option value="">Select your year</option>
+                    <option value="1">First Year</option>
+                    <option value="2">Second Year</option>
+                    <option value="3">Third Year</option>
+                    <option value="4">Fourth Year</option>
+                  </select>
+                </label>
+              </div>
+
+              <!-- Areas of Interest -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Areas of Interest</p>
+                  <textarea name="interests" placeholder="Describe your areas of interest"
+                    class="form-input rounded-lg bg-[#f0f2f5] min-h-36 p-4"></textarea>
+                </label>
+              </div>
+
+              <!-- Relevant Skills -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Relevant Skills</p>
+                  <textarea name="skills" placeholder="List your relevant skills"
+                    class="form-input rounded-lg bg-[#f0f2f5] min-h-36 p-4"></textarea>
+                </label>
+              </div>
+
+              <!-- Availability -->
+              <div class="px-4 py-3">
+                <label class="flex flex-col">
+                  <p class="pb-2 font-medium">Availability</p>
+                  <textarea name="availability" placeholder="Specify your availability"
+                    class="form-input rounded-lg bg-[#f0f2f5] min-h-36 p-4"></textarea>
+                </label>
+              </div>
+
+
+              <!-- Submit -->
+              <div class="px-4 py-3">
+                <button type="submit"
+                  class="w-full rounded-lg bg-[#0c7ff2] h-10 text-white font-bold">Register</button>
+              </div>
+            </form>
+            <!-- ✅ FORM END -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
